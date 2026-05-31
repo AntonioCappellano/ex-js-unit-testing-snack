@@ -6,7 +6,10 @@ function getInitials(nomeCompleto) {
 }
 
 function createSlug(slug) {
-  return slug.toLowerCase().replaceAll(" ", "-")
+  if (!slug) {
+    throw new Error("titolo non valido");
+  }
+  return slug.toLowerCase().replaceAll(" ", "-");
 }
 
 function average(avr) {
@@ -23,7 +26,7 @@ function average(avr) {
 }
 
 function isPalindrome(stringa) {
-  const lowerString = stringa.toLowerCase()
+  const lowerString = stringa.toLowerCase();
   return lowerString === lowerString.split("").reverse().join("");
 }
 module.exports = { getInitials, createSlug, average, isPalindrome };
