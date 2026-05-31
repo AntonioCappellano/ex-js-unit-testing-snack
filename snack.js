@@ -21,4 +21,9 @@ function average(avr) {
   const averageNumb = avr.reduce((acc, numb) => acc + numb, 0);
   return averageNumb / avr.length;
 }
-module.exports = { getInitials, createSlug, average };
+
+function isPalindrome(stringa) {
+  const lowerString = stringa.toLowerCase()
+  return lowerString === lowerString.split("").reverse().join("");
+}
+module.exports = { getInitials, createSlug, average, isPalindrome };
