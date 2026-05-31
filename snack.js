@@ -4,4 +4,8 @@ function getInitials(nomeCompleto) {
     .map((i) => i.charAt(0).toUpperCase())
     .join("");
 }
-module.exports = { getInitials };
+
+function createSlug(slug) {
+  return slug.toLowerCase()
+}
+module.exports = { getInitials, createSlug };
